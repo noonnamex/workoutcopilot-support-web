@@ -1,0 +1,115 @@
+<!--
+  Support page (single-file) - Slovak
+  - Replace: APP_NAME, SUPPORT_EMAIL, PRIVACY_POLICY_URL, FORMSPREE_ENDPOINT, YOUR_DOMAIN
+  - If you want the contact form to work without backend, use Formspree (https://formspree.io/) or Netlify Forms.
+  - To open the in-app support screen via universal links, configure apple-app-site-association on your domain and add the same URL patterns to your app entitlements. Do NOT redirect the support URL immediately to a deep link without providing web content (App Review needs visible contact info).
+-->
+
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Podpora – Workout Copilot</title>
+  <style>
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;padding:0;background:#f7fafc;color:#0f172a}
+    header{background:#0ea5a4;color:white;padding:24px 16px}
+    .container{max-width:900px;margin:24px auto;padding:0 16px}
+    h1,h2{margin:0 0 12px}
+    .card{background:white;border-radius:12px;padding:18px;margin-bottom:16px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .muted{color:#475569;font-size:0.95rem}
+    label{display:block;margin:8px 0 4px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf3}
+    button{background:#0ea5a4;color:white;padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+    footer{margin:32px 0 60px;text-align:center;color:#64748b}
+    pre{background:#0f172a;color:#f8fafc;padding:12px;border-radius:8px;overflow:auto}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Podpora – Workout Copilot</h1>
+      <p class="muted">Máte otázku? Tu nájdete najčastejšie odpovede a kontakt na podporu.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Kontakt</h2>
+      <p class="muted">Napíšte nám: <a href="mailto:workoutcopilot.help@gmail.com">workoutcopilot.help@gmail.com</a></p>
+      <p class="muted">Alebo použite formulár nižšie — odpovedáme obvykle do 24–72 hodín.</p>
+
+      <!-- Simple contact form using Formspree as example. Replace FORMSPREE_ENDPOINT with your endpoint. -->
+      <form id="support-form" action="https://formspree.io/f/movkqqvn" method="POST">
+        <label for="name">Meno (nepovinné)</label>
+        <input id="name" name="name" placeholder="Vaše meno" />
+
+        <label for="email">E‑mail (potrebné)</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+        <label for="subject">Predmet</label>
+        <input id="subject" name="subject" placeholder="Krátky popis problému" />
+
+        <label for="message">Popis problému – čo sa stalo a ako to zopakovať</label>
+        <textarea id="message" name="message" rows="6" placeholder="Uveďte model zariadenia, iOS verziu, verziu aplikácie, kroky k reprodukcii a priložte screenshoty (ak možno)" required></textarea>
+
+        <!-- optional hidden fields to help you process reports -->
+        <input type="hidden" name="appVersion" value="1.0.0" />
+        <input type="hidden" name="device" value="" id="deviceInfo" />
+
+        <p class="muted" style="margin-top:8px">Ak nechcete použiť formulár, pošlite e‑mail na <strong>workoutcopilot.help@gmail.com</strong> s nasledujúcimi informáciami: verzia aplikácie, iOS verzia, model zariadenia, kroky k reprodukcii, screenshoty.</p>
+
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button type="submit">Odošliť správu</button>
+          <button type="button" id="open-in-app">Otvoriť podporu v aplikácii</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>FAQ – Rýchle riešenia</h2>
+      <h3>1) Aplikácia padá pri spustení</h3>
+      <p class="muted">Skúste reštart zariadenia, aktualizovať iOS a aplikáciu na najnovšiu verziu. Ak problém pretrváva, pošlite nám report cez formulár (priložte crash log, ak máte).</p>
+
+      <h3>2) Nevidím moje platby / predplatné</h3>
+      <p class="muted">Prekontrolujte, či ste prihlásený do App Store s tým istým Apple ID. V prípade problémov odošlite screenshot účtov a potvrdenie o platbe.</p>
+
+      <h3>3) Ako žiadam vrátenie peňazí</h3>
+      <p class="muted">Vrátenie peňazí vybavuje priamo Apple cez stránku reportaproblem.apple.com. Ak potrebujete pomoc, pošlite nám e‑mail s podrobnosťami.</p>
+    </section>
+
+    <section class="card">
+      <h2>Čo nám poslať pri reporte chyby</h2>
+      <ol class="muted">
+        <li>Presný popis problému a kroky k reprodukcii</li>
+        <li>Verzia aplikácie (Settings → About) alebo číslo verzie</li>
+        <li>iOS verzia (Settings → General → About)</li>
+        <li>Model zariadenia (napr. iPhone 12)</li>
+        <li>Screenshoty / krátke video</li>
+        <li>Ak sa chováte technicky, log súbor alebo konzolový výpis</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Ochrana osobných údajov</h2>
+      <p class="muted">Naša <a href="PRIVACY_POLICY_URL">zásady ochrany osobných údajov</a> vysvetľujú, aké údaje zbierame a prečo. (Povinné pole v App Store Connect.)</p>
+    </section>
+
+    <footer>
+      <p class="muted">© Workout Copilot • Support page hosted on https://github.com/noonnamex/workoutcopilot-support-web</p>
+    </footer>
+  </main>
+
+  <script>
+    // small script that fills device info and tries to open the app via universal link when user clicks button
+    document.getElementById('deviceInfo').value = navigator.userAgent || '';
+
+    document.getElementById('open-in-app').addEventListener('click', function(){
+      // example universal link that should be configured on your domain and in-app
+      const universal = 'https://github.com/noonnamex/workoutcopilot-support-web/support/open-in-app';
+      // open universal link - if app handles it, it will open; otherwise browser shows the page
+      window.location.href = universal;
+    });
+  </script>
+</body>
+</html>
