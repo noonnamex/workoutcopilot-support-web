@@ -28,7 +28,7 @@
 <body>
   <header>
     <div class="container">
-      <h1>Podpora – Workout Copilot</h1>
+      <h1>Podpora – Workout Copiloteb</h1>
       <p class="muted">Máte otázku? Tu nájdete najčastejšie odpovede a kontakt na podporu.</p>
     </div>
   </header>
@@ -36,11 +36,11 @@
   <main class="container">
     <section class="card">
       <h2>Kontakt</h2>
-      <p class="muted">Napíšte nám: <a href="mailto:workoutcopilot.help@gmail.com">workoutcopilot.help@gmail.com</a></p>
+      <p class="muted">Napíšte nám: <a href="mailto:SUPPORT_EMAIL">SUPPORT_EMAIL</a></p>
       <p class="muted">Alebo použite formulár nižšie — odpovedáme obvykle do 24–72 hodín.</p>
 
       <!-- Simple contact form using Formspree as example. Replace FORMSPREE_ENDPOINT with your endpoint. -->
-      <form id="support-form" action="https://formspree.io/f/movkqqvn" method="POST">
+      <form id="support-form" action="FORMSPREE_ENDPOINT" method="POST">
         <label for="name">Meno (nepovinné)</label>
         <input id="name" name="name" placeholder="Vaše meno" />
 
@@ -54,10 +54,10 @@
         <textarea id="message" name="message" rows="6" placeholder="Uveďte model zariadenia, iOS verziu, verziu aplikácie, kroky k reprodukcii a priložte screenshoty (ak možno)" required></textarea>
 
         <!-- optional hidden fields to help you process reports -->
-        <input type="hidden" name="appVersion" value="1.0.0" />
+        <input type="hidden" name="appVersion" value="APP_VERSION" />
         <input type="hidden" name="device" value="" id="deviceInfo" />
 
-        <p class="muted" style="margin-top:8px">Ak nechcete použiť formulár, pošlite e‑mail na <strong>workoutcopilot.help@gmail.com</strong> s nasledujúcimi informáciami: verzia aplikácie, iOS verzia, model zariadenia, kroky k reprodukcii, screenshoty.</p>
+        <p class="muted" style="margin-top:8px">Ak nechcete použiť formulár, pošlite e‑mail na <strong>SUPPORT_EMAIL</strong> s nasledujúcimi informáciami: verzia aplikácie, iOS verzia, model zariadenia, kroky k reprodukcii, screenshoty.</p>
 
         <div style="display:flex;gap:8px;margin-top:12px">
           <button type="submit">Odošliť správu</button>
@@ -96,7 +96,7 @@
     </section>
 
     <footer>
-      <p class="muted">© Workout Copilot • Support page hosted on https://github.com/noonnamex/workoutcopilot-support-web</p>
+      <p class="muted">© Workout Copilot • Support page hosted on YOUR_DOMAIN</p>
     </footer>
   </main>
 
@@ -106,7 +106,7 @@
 
     document.getElementById('open-in-app').addEventListener('click', function(){
       // example universal link that should be configured on your domain and in-app
-      const universal = 'https://github.com/noonnamex/workoutcopilot-support-web/support/open-in-app';
+      const universal = 'https://YOUR_DOMAIN/support/open-in-app';
       // open universal link - if app handles it, it will open; otherwise browser shows the page
       window.location.href = universal;
     });
