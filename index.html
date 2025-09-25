@@ -22,7 +22,7 @@
   <header>
     <div class="container">
       <h1>Podpora – Workout Copilot</h1>
-      <p class="muted">Máte otázku? Tu nájdete najčastejšie odpovede a kontakt na podporu.</p>
+      <p class="muted">Máte problém alebo otázku? Kontaktujte nás pomocou formulára nižšie.</p>
     </div>
   </header>
 
@@ -30,7 +30,7 @@
     <section class="card">
       <h2>Kontakt</h2>
       <p class="muted">Napíšte nám: <a href="mailto:workoutcopilot.help@gmail.com">workoutcopilot.help@gmail.com</a></p>
-      <p class="muted">Alebo použite formulár nižšie — odpovedáme obvykle do 24–72 hodín.</p>
+      <p class="muted">Alebo použite formulár – odpovedáme zvyčajne do 24–72 hodín.</p>
 
       <form id="support-form" action="https://formspree.io/f/movkqqvn" method="POST">
         <label for="name">Meno (nepovinné)</label>
@@ -48,45 +48,40 @@
         <input type="hidden" name="appVersion" value="1.0.0" />
         <input type="hidden" name="device" value="" id="deviceInfo" />
 
-        <p class="muted" style="margin-top:8px">
-          Ak nechcete použiť formulár, pošlite e‑mail na <strong>workoutcopilot.help@gmail.com</strong> s nasledujúcimi informáciami: verzia aplikácie, iOS verzia, model zariadenia, kroky k reprodukcii, screenshoty.
-        </p>
-
         <div style="display:flex;gap:8px;margin-top:12px">
           <button type="submit">Odošliť správu</button>
-          <button type="button" id="open-in-app">Otvoriť podporu v aplikácii</button>
         </div>
       </form>
     </section>
 
     <section class="card">
-      <h2>FAQ – Rýchle riešenia</h2>
+      <h2>FAQ – Najčastejšie otázky</h2>
+
       <h3>1) Aplikácia padá pri spustení</h3>
-      <p class="muted">Skúste reštart zariadenia, aktualizovať iOS a aplikáciu na najnovšiu verziu. Ak problém pretrváva, pošlite nám report cez formulár (priložte crash log, ak máte).</p>
+      <p class="muted">Skúste reštart zariadenia, prípadne aktualizujte iOS a aplikáciu na najnovšiu verziu. Ak problém pretrváva, pošlite nám report cez formulár.</p>
 
-      <h3>2) Nevidím moje platby / predplatné</h3>
-      <p class="muted">Prekontrolujte, či ste prihlásený do App Store s tým istým Apple ID. V prípade problémov odošlite screenshot účtov a potvrdenie o platbe.</p>
+      <h3>2) Funkcia nefunguje ako má</h3>
+      <p class="muted">Opíšte problém čo najpresnejšie (kroky, ako ho zopakovať). Pripojte screenshot alebo video, ak môžete.</p>
 
-      <h3>3) Ako žiadam vrátenie peňazí</h3>
-      <p class="muted">Vrátenie peňazí vybavuje priamo Apple cez stránku <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Ak potrebujete pomoc, pošlite nám e‑mail s podrobnosťami.</p>
+      <h3>3) Ako vás kontaktujem?</h3>
+      <p class="muted">Použite kontaktný formulár vyššie alebo napíšte na <a href="mailto:workoutcopilot.help@gmail.com">workoutcopilot.help@gmail.com</a>.</p>
     </section>
 
     <section class="card">
-      <h2>Čo nám poslať pri reporte chyby</h2>
+      <h2>Čo poslať pri nahlásení chyby</h2>
       <ol class="muted">
         <li>Presný popis problému a kroky k reprodukcii</li>
-        <li>Verzia aplikácie (Settings → About) alebo číslo verzie</li>
+        <li>Verzia aplikácie (Settings → About)</li>
         <li>iOS verzia (Settings → General → About)</li>
         <li>Model zariadenia (napr. iPhone 12)</li>
-        <li>Screenshoty / krátke video</li>
-        <li>Ak sa chováte technicky, log súbor alebo konzolový výpis</li>
+        <li>Screenshoty alebo krátke video (ak je možné)</li>
       </ol>
     </section>
 
     <section class="card">
       <h2>Ochrana osobných údajov</h2>
       <p class="muted">
-        Naša <a href="privacy-policy.html">zásady ochrany osobných údajov</a> vysvetľujú, aké údaje zbierame a prečo. (Povinné pole v App Store Connect.)
+        Naša <a href="privacy-policy.html">zásady ochrany osobných údajov</a> vysvetľujú, aké údaje zbierame a prečo.
       </p>
     </section>
 
@@ -97,11 +92,6 @@
 
   <script>
     document.getElementById('deviceInfo').value = navigator.userAgent || '';
-
-    document.getElementById('open-in-app').addEventListener('click', function(){
-      const universal = 'https://workoutcopilot.app/support/open-in-app';
-      window.location.href = universal;
-    });
   </script>
 </body>
 </html>
